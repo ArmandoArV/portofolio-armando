@@ -6,7 +6,7 @@ import pfp from "../../assets/ProfilePicture/pfp.jpg";
 export const AboutMe = () => {
   return (
     <div
-      className="flex flex-col md:flex-row gap-10 p-10 rounded-10 justify-between w-full md:w-full mx-auto mt-10 
+      className="flex flex-col md:flex-row gap-10 p-10 rounded-10 justify-between w-full md:w-full mx-auto mt-10 md:mt-20
     "
     >
       <div className="w-full h-full flex justify-center items-center">
@@ -22,8 +22,7 @@ export const AboutMe = () => {
       </div>
 
       <div
-        className="w-full h-full mt-20 md:ml-50
-       
+        className="w-full h-full mt-0 md:ml-50 md:mt-20
       "
       >
         <h1 className="text-center md:text-left bg-custom-gradient bg-clip-text text-transparent font-bold md:text-3xl animate-gradient bg-[400% 400%]">
@@ -31,8 +30,9 @@ export const AboutMe = () => {
         </h1>
 
         <p
-          className="text-1.5xl 
-        font-normal text-justify ml-10 mt-5 text-white"
+          className="
+          md:text-1.5xl  
+        font-normal text-justify mt-5 text-white"
         >
           {aboutMe.description}
         </p>

@@ -15,7 +15,10 @@ export default function NavBar() {
       <ul
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } sm:flex sm:flex-row sm:justify-between sm:items-center flex-col items-start list-none mx-auto p-0`}
+        } sm:flex sm:justify-between sm:items-center flex-col items-start list-none mx-auto p-0
+          sm:bg-transparent sm:h-auto sm:w-auto sm:relative sm:flex-row sm:ml-auto   
+        bg-blue-900 h-screen w-screen fixed top-0 left-0 z-10
+        `}
       >
         {Object.entries(navBarElements).map(
           ([key, element]: [string, NavBarElement]) => (
@@ -31,7 +34,9 @@ export default function NavBar() {
         )}
       </ul>
       <button
-        className="block sm:hidden text-white focus:outline-none ml-auto"
+        className="
+        block sm:hidden text-white focus:outline-none ml-auto mr-4 z-20
+        "
         onClick={toggleMenu}
       >
         <svg
