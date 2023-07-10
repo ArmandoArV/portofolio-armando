@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
     <NavBar />
-    <main className={styles.main}>
+    <main className={styles.main} >
       <AboutMe />
     </main>
     </>

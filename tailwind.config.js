@@ -11,6 +11,7 @@ module.exports = {
       backgroundImage: {
         "custom-gradient":
           "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
+        "main-background": "#262626",
       },
       animation: {
         gradient: "gradient 5s ease infinite",
