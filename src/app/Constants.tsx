@@ -26,28 +26,24 @@ export const aboutMe: AboutMe = {
 };
 
 export const navBarElements: Record<string, NavBarElement> = {
-  About: {
-    ref: "/about",
-    class: "Navbar-item",
-  },
   Projects: {
-    ref: "/projects",
+    ref: "#projects",
     class: "Navbar-item",
   },
   Articles: {
-    ref: "/articles",
+    ref: "#articles",
     class: "Navbar-item",
   },
   Prizes: {
-    ref: "/prizes",
+    ref: "#prizes",
     class: "Navbar-item",
   },
   Contact: {
-    ref: "/contact",
+    ref: "#contact",
     class: "Navbar-item",
   },
   Resume: {
-    ref: "/resume",
+    ref: "#resume",
     class: "Navbar-item",
   },
 };

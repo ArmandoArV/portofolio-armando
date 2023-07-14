@@ -10,6 +10,16 @@ export default function NavBar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <div className="text-white flex flex-row justify-end items-center px-20 h-16 w-full fixed top-0 left-0 z-10">
       <ul
@@ -20,15 +30,31 @@ export default function NavBar() {
         bg-blue-900 h-screen w-screen fixed top-0 left-0 z-10
         `}
       >
+        <li className="my-2">
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("home");
+            }}
+            className="inline-block text-white no-underline text-base tracking-wider uppercase relative transition-all duration-400 ease-in-out px-4 py-2 mx-2 hover:text-pink-400"
+          >
+            Home
+          </a>
+        </li>
         {Object.entries(navBarElements).map(
           ([key, element]: [string, NavBarElement]) => (
             <li className="my-2" key={key}>
-              <Link
+              <a
                 href={element.ref}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(element.ref.substring(1));
+                }}
                 className="inline-block text-white no-underline text-base tracking-wider uppercase relative transition-all duration-400 ease-in-out px-4 py-2 mx-2 hover:text-pink-400"
               >
                 {key}
-              </Link>
+              </a>
             </li>
           )
         )}
