@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import styles from "./ProjectsCard.module.css";
 
 interface ProjectsCardProps {
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
 }
 
 const ProjectsCard: React.FC<ProjectsCardProps> = ({

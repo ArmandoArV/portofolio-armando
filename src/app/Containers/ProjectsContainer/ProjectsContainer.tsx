@@ -1,7 +1,6 @@
 import React from "react";
 import { projectList } from "@/app/Constants";
 import ProjectsCard from "@/app/Components/ProjectsCard/ProjectsCard";
-import { StaticImageData } from "next/image";
 
 const ProjectsContainer: React.FC = () => {
   return (
@@ -13,7 +12,7 @@ const ProjectsContainer: React.FC = () => {
             key={project.title}
             title={project.title}
             description={project.description}
-            image={project.image.toString()} // Convert StaticImageData to string
+            image={project.image}
           />
         ))}
       </div>
