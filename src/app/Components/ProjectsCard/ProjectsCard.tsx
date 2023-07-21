@@ -9,15 +9,19 @@ interface ProjectsCardProps {
   title: string;
   description: string;
   image: StaticImageData;
+  repo?: string;
 }
 
 const ProjectsCard: React.FC<ProjectsCardProps> = React.memo(
-  ({ title, description, image }) => {
+  ({ title, description, image, repo }) => {
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = useCallback(() => {
       setIsClicked((prevState) => !prevState);
-    }, []);
+      if (repo) {
+        window.open(repo, "_blank");
+      }
+    }, [repo]);
 
     return (
       <div

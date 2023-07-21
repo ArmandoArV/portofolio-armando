@@ -19,6 +19,26 @@ export interface Project {
   repo?: string;
 }
 
+export interface Articles {
+  title: string;
+  description: string;
+  image: StaticImageData;
+  link?: string;
+}
+
+export interface Experience{
+  title: string;
+  period: string;
+  image: StaticImageData;
+}
+
+export interface Prize{
+  title: string;
+  description: string;
+  image: StaticImageData;
+}
+
+
 export const aboutMe: AboutMe = {
   name: "Armando Arredondo Valle",
   description:
@@ -64,3 +84,15 @@ export const projectList: Project[] = [
     repo: "https://github.com/TonyNogueron/react-plants",
   },
 ];
+
+export const articlesList: Articles[] = [
+  {
+    title:
+      "White Blood Cell Detection and Classification in Blood Smear Images Using a One-Stage Object Detector and Similarity Learning",
+    description:
+      "Nominated for the Best Paper Award at the 2022 Mexican International Conference of Artificial Intelligence (MICAI) for proposing the use of Similarity Learning.",
+    image: Winning,
+    link: "https://link.springer.com/chapter/10.1007/978-3-031-19493-1_27",
+  },
+];
+

@@ -1,0 +1,116 @@
+.ArticleCardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin: 0 1em;
+  padding: 1em;
+  background-color: #123142;
+  border-radius: 1em;
+}
+
+.roundImage {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 20em;
+  height: 20em;
+  margin: 1em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #3b657a;
+  border-radius: 1em;
+  margin-top: 1.5em;
+  padding: 1em;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e9f0c9;
+  text-align: center;
+}
+
+.description {
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+}
+
+/* Additional styles for the image */
+.roundImage img {
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.link {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.ArticleCardContainer:hover {
+  transform: scale(1.05);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .ArticleCardContainer {
+    width: 100%;
+    margin: 0;
+  }
+  .roundImage {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 1em;
+  }
+
+  .info {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .infoContainer {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e9f0c9;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+  }
+}
