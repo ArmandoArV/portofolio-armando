@@ -1,116 +1,134 @@
-
-
-.navbarContainer{
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    padding: 0 20px;
-    height: 60px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+.navbarContainer {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.navbarContainer .navbarList{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
+.navbarContainer .navbarList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.navbarContainer .navbarList .navbarItem{
-    margin: 0 10px;
+.navbarContainer .navbarList .navbarItem {
+  margin: 0 10px;
 }
 
-.navbarContainer .navbarList .navbarItem a{
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    position: relative;
-    transition: all 0.4s ease;
-    padding: 10px;
-    margin: 0 10px;
+.navbarContainer .navbarList .navbarItem a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.4s ease;
+  padding: 10px;
+  margin: 0 10px;
 }
 
 .navbarContainer .navbarList .navbarItem a::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    background-color: var(--hover-color);
-    width: 0;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: var(--hover-color);
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
 
-.navbarContainer .navbarList .navbarItem a:hover { color: var(--hover-color); }
-.navbarContainer .navbarList .navbarItem a:hover::after { width: 100%; }
+.navbarContainer .navbarList .navbarItem a:hover {
+  color: var(--hover-color);
+}
+.navbarContainer .navbarList .navbarItem a:hover::after {
+  width: 100%;
+}
 
 .navbarContainer .navbarList .navbarItem button {
-    width: 130px;
-    height: 40px;
-    border: var(--hover-color) 2px solid;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    color: #ffffff;
-    z-index: 2;
-    line-height: 40px;
-    padding: 0;
-    font-size: 18px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+  width: 130px;
+  height: 40px;
+  border: var(--hover-color) 2px solid;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #ffffff;
+  z-index: 2;
+  line-height: 40px;
+  padding: 0;
+  font-size: 18px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
-.navbarContainer .navbarList .navbarItem button:hover{border: none}
+.navbarContainer .navbarList .navbarItem button:hover {
+  border: none;
+}
 
-.navbarContainer .navbarList .navbarItem button::before, .navbarContainer .navbarList .navbarItem button::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    border: 2px solid;
-    z-index: -1;
-    transition: all 0.3s ease;
+.navbarContainer .navbarList .navbarItem button::before,
+.navbarContainer .navbarList .navbarItem button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 2px solid;
+  z-index: -1;
+  transition: all 0.3s ease;
 }
 
 .navbarContainer .navbarList .navbarItem button::before {
-    top: 0;
-    left: 0;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-    border-top-color: var(--hover-color);
-    border-left-color: var(--hover-color);
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: var(--hover-color);
+  border-left-color: var(--hover-color);
 }
 
 .navbarContainer .navbarList .navbarItem button::after {
-    bottom: 0;
-    right: 0;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-bottom-color: var(--hover-color);
-    border-right-color: var(--hover-color);
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: var(--hover-color);
+  border-right-color: var(--hover-color);
 }
 
-.navbarContainer .navbarList .navbarItem button:hover::before, .navbarContainer .navbarList .navbarItem button:hover::after {
-    width: 100%;
-    height: 100%;
+.navbarContainer .navbarList .navbarItem button:hover::before,
+.navbarContainer .navbarList .navbarItem button:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.navbarContainer .navbarList.open {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+.navbarContainer{
+    display: none;
+}
+
 }
