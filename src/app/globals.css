@@ -3,10 +3,11 @@
 @import "tailwindcss/utilities";
 
 /* Add your custom global styles below */
-:root{
+:root {
   --customGradient: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  --hover-color: #f69ec4;
+  --backColor: #262626;
 }
-
 
 /* Example styles */
 body {

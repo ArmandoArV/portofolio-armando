@@ -1,6 +1,6 @@
 import React from "react";
 import { projectList } from "@/app/Constants";
-import ProjectsCard from "@/app/Components/ProjectsCard/ProjectsCard";
+import CardComponent from "../../Components/CardComponent/CardComponent";
 import styles from "../ArticlesContainer/ArticlesContainer.module.css";
 const ProjectsContainer: React.FC = () => {
   return (
@@ -8,12 +8,14 @@ const ProjectsContainer: React.FC = () => {
       <h1 className={styles.Header}>Projects</h1>
       <div className={styles.cardsContainer}>
         {projectList.map((project) => (
-          <ProjectsCard
+          <CardComponent
             key={project.title}
             title={project.title}
             description={project.description}
             image={project.image}
-            repo={project.repo}
+            link={project.repo}
+            linkTxt={project.linkTxt}
+
           />
         ))}
       </div>

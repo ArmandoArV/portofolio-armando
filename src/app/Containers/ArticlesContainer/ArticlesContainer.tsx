@@ -1,5 +1,5 @@
 import React from "react";
-import ArticleCard from "../../Components/ArticleCard/ArticleCard";
+import CardComponent from "../../Components/CardComponent/CardComponent";
 import { articlesList } from "../../Constants";
 import styles from "./ArticlesContainer.module.css";
 const ArticlesContainer: React.FC = () => {
@@ -9,11 +9,12 @@ const ArticlesContainer: React.FC = () => {
       <div className={styles.cardsContainer}>
         {articlesList.map((article) => (
           <div className="flex-grow-1" key={article.title}>
-            <ArticleCard
+            <CardComponent
               title={article.title}
               description={article.description}
               image={article.image}
               link={article.link}
+              linkTxt={article.linkTxt}
             />
           </div>
         ))}

@@ -1,19 +1,22 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import styles from "./ArticleCards.module.css";
+import styles from "./CardComponent.module.css";
 import { link } from "fs";
 
-interface ArticlesContainerProps {
+interface CardContainerProps {
   title: string;
   description: string;
   image: StaticImageData;
   link?: string;
+  linkTxt?: string;
 }
 
-const ArticlesContainer: React.FC<ArticlesContainerProps> = ({
+const CardComponent: React.FC<CardContainerProps> = ({
   title,
   description,
   image,
+  link,
+  linkTxt,
 }) => {
   return (
     <div className={styles.ArticleCardContainer}>
@@ -34,11 +37,11 @@ const ArticlesContainer: React.FC<ArticlesContainerProps> = ({
           <p className={styles.description}>{description}</p>
         </div>
         <div className={styles.infoContainer}>
-          <p className={styles.link}>Read More</p>
+          <p className={styles.link}>{linkTxt}</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default ArticlesContainer;
+export default CardComponent;

@@ -18,6 +18,7 @@ export interface Project {
   title: string;
   description: string;
   image: StaticImageData;
+  linkTxt?: string;
   repo?: string;
 }
 
@@ -25,6 +26,7 @@ export interface Articles {
   title: string;
   description: string;
   image: StaticImageData;
+  linkTxt?: string;
   link?: string;
 }
 
@@ -71,10 +73,11 @@ export const navBarElements: Record<string, NavBarElement> = {
 
 export const projectList: Project[] = [
   {
-    title: "EdTech Start Up - Responsive Web Service and Unity Game",
+    title: "Responsive Web Service and  Game",
     description:
       "Built responsive web service for EdTech Start Up. Demonstrated full-stack web development and project management. Designed Unity game in C# for programming practice.",
     image: Winning,
+    linkTxt: "Link",
     repo: "https://github.com/ArmandoArV/AulifyFront-End",
   },
   {
@@ -82,6 +85,7 @@ export const projectList: Project[] = [
     description:
       "Created an intelligent plant pot that tracked growth variables. Utilized NodeMCU Wifi to post sensor measurements to AWS RDS. Developed ReactJs frontend for real-time monitoring and watering on the Planty website.",
     image: Planty,
+    linkTxt: "Link",
     repo: "https://github.com/TonyNogueron/react-plants",
   },
 ];
@@ -93,6 +97,7 @@ export const articlesList: Articles[] = [
     description:
       "Nominated for the Best Paper Award at the 2022 Mexican International Conference of Artificial Intelligence (MICAI) for proposing the use of Similarity Learning.",
     image: MICAI,
+    linkTxt: "Read More",
     link: "https://link.springer.com/chapter/10.1007/978-3-031-19493-1_27",
   },
   {
@@ -101,6 +106,7 @@ export const articlesList: Articles[] = [
     description:
       "Presented at ENES 2022 by UNAM, explored machine learning for star, galaxy, and quasar classification using assessed logistic regression.",
     image: UNAM,
+    linkTxt: "Read More",
     link: "https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:a6f66366-c226-3707-891e-2f2317e32d5d",
   },
 ];
