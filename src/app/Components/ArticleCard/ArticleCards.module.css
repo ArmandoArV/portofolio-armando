@@ -87,3 +87,33 @@
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
+
+@media (max-width: 768px) {
+  .ArticleCardContainer {
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+  }
+
+  .roundImage {
+    width: 15em;
+    height: 15em;
+  }
+
+  .info {
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .infoContainer {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
