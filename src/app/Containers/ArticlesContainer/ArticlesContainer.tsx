@@ -1,19 +1,21 @@
 import React from "react";
 import ArticleCard from "../../Components/ArticleCard/ArticleCard";
-import {articlesList} from "../../Constants";
-
+import { articlesList } from "../../Constants";
+import styles from "./ArticlesContainer.module.css";
 const ArticlesContainer: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full">
-      <h1 className="text-4xl font-bold text-center text-white">Articles</h1>
-      <div className="flex md:flex-row flex-col w-full max-w-screen-lg px-25 mt-8">
+    <div className={styles.outsideContainer}>
+      <h1 className={styles.Header}>Articles</h1>
+      <div className={styles.cardsContainer}>
         {articlesList.map((article) => (
-          <ArticleCard
-            title={article.title}
-            description={article.description}
-            image={article.image}
-            link={article.link}
-          />
+          <div className="flex-grow-1" key={article.title}>
+            <ArticleCard
+              title={article.title}
+              description={article.description}
+              image={article.image}
+              link={article.link}
+            />
+          </div>
         ))}
       </div>
     </div>

@@ -1,5 +1,7 @@
 import Winning from "./assets/Projects/Winning.png";
 import Planty from "./assets/Projects/Planty.png";
+import MICAI from "./assets/Articles/MICAI.png";
+import UNAM from "./assets/Articles/UNAM.png";
 import { StaticImageData } from "next/image";
 
 export interface NavBarElement {
@@ -26,18 +28,17 @@ export interface Articles {
   link?: string;
 }
 
-export interface Experience{
+export interface Experience {
   title: string;
   period: string;
   image: StaticImageData;
 }
 
-export interface Prize{
+export interface Prize {
   title: string;
   description: string;
   image: StaticImageData;
 }
-
 
 export const aboutMe: AboutMe = {
   name: "Armando Arredondo Valle",
@@ -91,8 +92,15 @@ export const articlesList: Articles[] = [
       "White Blood Cell Detection and Classification in Blood Smear Images Using a One-Stage Object Detector and Similarity Learning",
     description:
       "Nominated for the Best Paper Award at the 2022 Mexican International Conference of Artificial Intelligence (MICAI) for proposing the use of Similarity Learning.",
-    image: Winning,
+    image: MICAI,
     link: "https://link.springer.com/chapter/10.1007/978-3-031-19493-1_27",
   },
+  {
+    title:
+      "Analysis of Machine Learning Algorithms Applied to the Classification of Celestial Object: Stars, Galaxies and Quasars",
+    description:
+      "Presented at ENES 2022 by UNAM, explored machine learning for star, galaxy, and quasar classification using assessed logistic regression.",
+    image: UNAM,
+    link: "https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:a6f66366-c226-3707-891e-2f2317e32d5d",
+  },
 ];
-

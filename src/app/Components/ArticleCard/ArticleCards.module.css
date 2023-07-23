@@ -1,56 +1,56 @@
 .ArticleCardContainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  width: 50%;
-  height: 100%;
-  margin: 0 1em;
-  padding: 1em;
-  background-color: #123142;
+  justify-content: center;
+  align-items: center;
+  width: 25em;
+  height: 50em;
+  margin: 2em;
   border-radius: 1em;
+  transition: all 0.5s ease-in-out;
 }
 
 .roundImage {
   border-radius: 50%;
-  overflow: hidden;
   width: 20em;
   height: 20em;
-  margin: 1em;
+  background: var(--customGradient);
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+  padding: 0.1em;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 100%;
-  background-color: #3b657a;
-  border-radius: 1em;
-  margin-top: 1.5em;
+  align-items: center;
   padding: 1em;
+  background-color: #123142;
+  margin-top: 1em;
+  border-radius: 1em;
 }
 
 .infoContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 100%;
-  margin-top: 1em;
+  align-items: center;
   padding: 1em;
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #e9f0c9;
+  color: #f8f5c1;
+  margin-top: 1em;
   text-align: center;
 }
 
 .description {
-  font-size: 1em;
+  font-size: 1rem;
   color: #fff;
+  margin-top: 1em;
   text-align: center;
 }
 
@@ -63,54 +63,27 @@
 }
 
 .link {
-  color: #fff;
   text-decoration: underline;
-  cursor: pointer;
-  font-size: 1.5rem;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
 }
 
 .link:hover {
   transform: scale(1.1);
+  color: transparent;
+  background: var(--customGradient);
+  background-image: var(--customGradient);
+  color: transparent;
+  background-clip: text;
+  animation: gradient 5s ease infinite;
+  background-size: 400% 400%;
 }
 
 .ArticleCardContainer:hover {
   transform: scale(1.05);
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .ArticleCardContainer {
-    width: 100%;
-    margin: 0;
-  }
-  .roundImage {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    border-radius: 1em;
-  }
-
-  .info {
-    width: 100%;
-    margin-top: 1em;
-  }
-
-  .infoContainer {
-    width: 100%;
-    margin-top: 1em;
-  }
-
-  .title {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #e9f0c9;
-    text-align: center;
-  }
-
-  .description {
-    font-size: 0.8rem;
-    color: #fff;
-    text-align: center;
-  }
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }

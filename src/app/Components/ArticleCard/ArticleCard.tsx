@@ -34,9 +34,7 @@ const ArticlesContainer: React.FC<ArticlesContainerProps> = ({
           <p className={styles.description}>{description}</p>
         </div>
         <div className={styles.infoContainer}>
-          <p className={styles.link}>
-            Read More
-          </p>
+          <p className={styles.link}>Read More</p>
         </div>
       </div>
     </div>
