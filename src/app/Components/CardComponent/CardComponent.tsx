@@ -36,9 +36,14 @@ const CardComponent: React.FC<CardContainerProps> = ({
         <div className={styles.infoContainer}>
           <p className={styles.description}>{description}</p>
         </div>
-        <div className={styles.infoContainer}>
-          <p className={styles.link}>{linkTxt}</p>
-        </div>
+        {link &&
+          linkTxt && ( // Only render the link if both link and linkTxt are provided
+            <div className={styles.infoContainer}>
+              <a href={link} className={styles.link}>
+                {linkTxt}
+              </a>
+            </div>
+          )}
       </div>
     </div>
   );

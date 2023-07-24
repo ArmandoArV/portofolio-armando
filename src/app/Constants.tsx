@@ -45,7 +45,7 @@ export interface Prize {
 export const aboutMe: AboutMe = {
   name: "Armando Arredondo Valle",
   description:
-    "I am currently studying Computer Science and have developed expertise in a range of programming languages, including C++, Python, React.js, and MySQL. Through participating in the NASA Human Rover Exploration Challenge and the Mexican International Conference of Artificial Intelligence, I have gained valuable experience in data analysis, teamwork, and leadership. I am highly motivated, dedicated, and passionate about programming, which makes me a strong candidate for opportunities in the field.",
+    "I am a Computer Science student with expertise in C++, Python, React.js, and MySQL. My experience includes the NASA Human Rover Exploration Challenge and the Mexican International Conference of Artificial Intelligence, where I honed skills in data analysis, teamwork, and leadership. I am highly motivated, dedicated, and passionate about programming, making me a strong candidate for opportunities in the field.",
 };
 
 export const navBarElements: Record<string, NavBarElement> = {

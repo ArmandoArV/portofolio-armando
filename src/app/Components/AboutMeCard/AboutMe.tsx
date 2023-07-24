@@ -2,40 +2,26 @@ import React from "react";
 import Image from "next/image";
 import { aboutMe } from "../../Constants";
 import pfp from "../../assets/ProfilePicture/pfp.jpg";
+import styles from "./AboutMe.module.css";
 
 export const AboutMe = () => {
   return (
-    <div
-      className="flex flex-col md:flex-row gap-10 p-10 rounded-10 justify-between w-full md:w-full mx-auto mt-10 md:mt-20
-    "
-    >
-      <div className="w-full h-full flex justify-center items-center">
-        <div className="lg:h-72 w-72 md:h-120  bg-custom-gradient bg-[400% 400%] border-7 shadow-2xl rounded-full flex justify-center items-center animate-gradient">
+    <div className={styles.AboutMeContainer}>
+      <div className={styles.ImgContainer}>
+        <div className={styles.pfpImage}>
           <Image
             src={pfp}
             alt="Picture of the author"
-            width={275}
-            height={200}
-            className="rounded-full"
+            objectFit="cover"
+            objectPosition="center"
+            className={styles.roundImage}
           />
         </div>
       </div>
 
-      <div
-        className="w-full h-full mt-0 md:ml-50 md:mt-20
-      "
-      >
-        <h1 className="text-center md:text-left bg-custom-gradient bg-clip-text text-transparent font-bold md:text-3xl animate-gradient bg-[400% 400%]">
-          {aboutMe.name}
-        </h1>
-
-        <p
-          className="
-          md:text-1.5xl  
-        font-normal text-justify mt-5 text-white"
-        >
-          {aboutMe.description}
-        </p>
+      <div className={styles.AboutMeDescContainer}>
+        <h1 className={styles.Name}>{aboutMe.name}</h1>
+        <p className={styles.AboutMeDesc}>{aboutMe.description}</p>
       </div>
     </div>
   );
